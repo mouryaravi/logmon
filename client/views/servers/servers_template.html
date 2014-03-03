@@ -1,0 +1,28 @@
+<template name="servers">
+  <ul class="serversList">
+    {{#each serversList}}
+    <li>
+      <div class="server">
+        <a href="{{pathFor 'server'}}">{{name}}</a>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="server">
+  <div class="server">
+    <p>Name: {{name}}</p>
+    <ul>
+      {{#each files}}
+      <li>
+        <a href="#" class="serverLog">{{this}}</a>
+      </li>
+      {{/each}}
+    </ul>
+    <div class="currentLogsDiv">
+
+    </div>
+  </div>
+
+</template>
