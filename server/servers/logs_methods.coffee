@@ -3,3 +3,4 @@ Meteor.methods
     console.log 'Got params: ', params
 
     LogsServerConnPool.addIfDoesntExist params.server, params.file
+    "Finished"

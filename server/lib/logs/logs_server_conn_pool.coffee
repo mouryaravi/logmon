@@ -1,13 +1,14 @@
+
 class @LogsServerConnPool
-  @pool = {}
-
-  @addIfDoesntExist: (serverId, file)->
-    if @pool[serverId] and @pool[serverId][file]
+  @logsConnPool: {}
+  @addIfDoesntExist: (serverId, file)=>
+    if @logsConnPool[serverId] and @logsConnPool[serverId][file]
+      console.log "Connection for", serverId, file, " already exists..."
       return
-    wrappedGetConnection = Async.wrap SSHConnection.getConnection
-
-    conn = wrappedGetConnection serverId, file
-    @pool[serverId] = {}
-    @pool[serverId][file] = conn
+    else
+      console.log "Creating new Connection for", serverId, file, "..."
+      conn = SSHConnection.getConnection serverId, file
+      @logsConnPool[serverId] = {}
+      @logsConnPool[serverId][file] = conn
 
 

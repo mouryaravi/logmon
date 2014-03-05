@@ -13,9 +13,9 @@ class @SSHConnection
       conn.exec 'tail -f ' + file, (err, stream)->
         if err then throw new Meteor.Error 500, 'Error executing uptime', err
 
-        stream.on 'data', Meteor.bindEnvironment (data, extended)->
+        stream.on 'data', (data, extended)->
           console.log (if extended == 'stderr' then 'STDERR: ' else 'STDOUT: '), 'received data: ', data.toString()
-          updateLogs = Logs.update(
+          Logs.update(
             {
               serverId: server._id
               file: file
@@ -29,9 +29,7 @@ class @SSHConnection
               upsert: true
             }
           )
-          wrappedUpdate = Async.wrap updateLogs
-          wrappedUpdate()
-          #log = Logs.findOne serverId: server._id, file: file
+          log = Logs.findOne serverId: server._id, file: file
           console.log "the data: ", log
 
     conn.on 'error', (err)->
@@ -50,6 +48,6 @@ class @SSHConnection
       username: server.username
       password: server.password
 
-
+    console.log "Returning the connection...."
     conn
 

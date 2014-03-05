@@ -5,15 +5,21 @@ Template.server.events
     console.log 'Clicked on', $(event.target).text()
     Meteor.call 'getLogs',
       server: Session.get('selectedServer'),
-      file: $(event.target).text()
+      file: $(event.target).text(),
+      (err, status)->
+        if err
+          throw new Meteor.Error err.error, err.reason, err.details
+        else
+          console.log "Requested get logs...", status
 
 
 Deps.autorun ()->
   console.log "Finding for ", Session.get("selectedServer"), ", file: ", Session.get("selectedFile")
-  newLog = Logs.findOne
+  newLog = PersistentLogs.findOne
     serverId: Session.get('selectedServer')
     file: Session.get('selectedFile')
 
-  console.log "New log", newLog
   if newLog
-    console.log 'Got new data: ', newLog.log
+    data = newLog.log.replace /\n/g, '<br />'
+    console.log 'Got new data....'
+    $('.currentLogsDiv').append data
