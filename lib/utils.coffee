@@ -1,0 +1,2 @@
+@isLoggedIn = ()->
+  Meteor.user()

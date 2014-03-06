@@ -13,7 +13,6 @@
     port:
       type: Number
       label: 'Server port'
-      max: 10
       optional: true
       autoValue: ()->
         22
@@ -32,13 +31,16 @@
     files:
       type: [String]
       label: 'Log files list'
-      max: 20
 
     userId:
       type: String
       label: 'Server added by'
       max: 200
       denyUpdate: true
+      autoValue: ()->
+        if @isInsert then @userId
+        else if @isUpsert then {$setOnInsert: @userId}
+      optional: true
 
     createdAt:
       type: Date

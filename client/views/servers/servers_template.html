@@ -14,9 +14,10 @@
   <div class="server">
     <p>Name: {{name}}</p>
     <ul>
-      {{#each files}}
+      {{#each filesArrayWithIndex}}
       <li>
-        <a href="#" class="serverLog">{{this}}</a>
+        <a href="#" class="serverLog">{{this.file}}</a>
+        <button class="btn btn-primary btn-sm" id="{{this.index}}">Close</button>
       </li>
       {{/each}}
     </ul>

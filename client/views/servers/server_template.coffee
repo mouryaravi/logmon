@@ -1,3 +1,14 @@
+Template.server.helpers
+  filesArrayWithIndex: ()->
+    console.log 'Files: ', @files
+    idx = -1
+    _.map @files, (file)->
+      idx += 1
+      {index: idx, file: file}
+
+
+
+
 Template.server.events
   'click li .serverLog': (event)->
     event.preventDefault()
@@ -12,6 +23,18 @@ Template.server.events
         else
           console.log "Requested get logs...", status
 
+  'click li button': (event)->
+    event.preventDefault()
+    console.log 'Removing server, file', Session.get("selectedServer"), @file
+    Meteor.call 'stopLogs',
+      server: Session.get('selectedServer'),
+      file: @file
+      (err, status)->
+        if err
+          throw new Meteor.Error err.error, err.reason, err.details
+        else
+          console.log "Requested to stop logs...", status
+
 
 Deps.autorun ()->
   console.log "Finding for ", Session.get("selectedServer"), ", file: ", Session.get("selectedFile")
@@ -23,3 +46,4 @@ Deps.autorun ()->
     data = newLog.log.replace /\n/g, '<br />'
     console.log 'Got new data....'
     $('.currentLogsDiv').append data
+

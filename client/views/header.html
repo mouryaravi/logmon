@@ -9,8 +9,13 @@
         <li>
           <a href="/">Home</a>
         </li>
+        <li>
+          <a href="{{pathFor 'newServer'}}">Add Server</a>
+        </li>
         {{/if}}
-        {{> loginButtons}}
+        <li>
+          {{> loginButtons}}
+        </li>
       </ul>
     </div>
   </div>

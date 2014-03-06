@@ -1,4 +1,9 @@
 Router.map ()->
+  @route 'servers',
+    path: '/servers'
+    data: ()->
+      serversList: Servers.find()
+
   @route 'server',
     path: '/server/:_id'
     data: ()->
@@ -9,7 +14,9 @@ Router.map ()->
     unload: ()->
       Session.set 'selectedServer', ''
       Session.set 'selectedFile', ''
-#    waitOn: ()->
-#      [
-#        Meteor.subscribe 'log', @params._id
-#      ]
+
+  @route 'newServer',
+    path: '/newServer'
+    data: ()->
+      Servers.find
+    loginRequired: 'login'

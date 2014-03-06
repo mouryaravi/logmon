@@ -10,8 +10,19 @@ class @SSHConnection
     conn.on 'ready', ()->
       console.log 'Connection ready for server: ', server.name, file
 
-      conn.exec 'tail -f ' + file, (err, stream)->
-        if err then throw new Meteor.Error 500, 'Error executing uptime', err
+      conn.exec 'tail -f ' + file + '& read; kill $!', (err, stream)->
+        if err
+          throw new Meteor.Error 500, 'Error executing uptime', err
+
+        stream.on 'end', ()->
+          consle.log 'Stream End...'
+
+        stream.on 'error', (err)->
+          console.log 'Stream Error: ', err
+
+        stream.on 'close', (had_error)->
+          console.log 'Stream had error? ' + had_error + ", closing..."
+          conn.end()
 
         stream.on 'data', (data, extended)->
           console.log (if extended == 'stderr' then 'STDERR: ' else 'STDOUT: '), 'received data: ', data.toString()
@@ -46,7 +57,8 @@ class @SSHConnection
       host: server.host
       port: server.port
       username: server.username
-      password: server.password
+      password: server.password || @DEFAULT_PASSWORD
+
 
     console.log "Returning the connection...."
     conn
