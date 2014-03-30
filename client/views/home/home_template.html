@@ -1,3 +1,7 @@
 <template name="home">
-  <a href="{{pathFor 'servers'}}">See List of servers</a>
+  {{#if serversExist}}
+    {{> dashboard}}
+  {{else}}
+    {{> newServer}}
+  {{/if}}
 </template>

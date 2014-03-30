@@ -8,10 +8,10 @@ Template.newServer.events
       host:  $("#host").val()
       port: $("#port").val()
       username:  $("#username").val()
-      password:  $("#password").val()
       files:  $("#files").val()
       (err, result)->
         if err
           throw new Meteor.Error err.error, err.reason
         else
           console.log 'Added new server', result
+          Router.go 'home'

@@ -57,9 +57,8 @@ class @SSHConnection
       host: server.host
       port: server.port
       username: server.username
-      password: server.password || @DEFAULT_PASSWORD
+      password: server.password
 
 
     console.log "Returning the connection...."
     conn
-

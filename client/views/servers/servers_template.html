@@ -13,16 +13,18 @@
 <template name="server">
   <div class="server">
     <p>Name: {{name}}</p>
-    <ul>
+    <ul class="nav nav-tabs">
       {{#each filesArrayWithIndex}}
       <li>
-        <a href="#" class="serverLog">{{this.file}}</a>
-        <button class="btn btn-primary btn-sm" id="{{this.index}}">Close</button>
+        <a href="#{{this.index}}"  data-toggle="tab" class="serverLog">{{this.file}}</a>
+        <button class="btn btn-primary btn-sm">X</button>
       </li>
       {{/each}}
     </ul>
-    <div class="currentLogsDiv">
-
+    <div class="tab-content">
+      {{#each filesArrayWithIndex}}
+        <div class="tab-pane" id="{{this.index}}"></div>
+      {{/each}}
     </div>
   </div>
 

@@ -1,0 +1,47 @@
+<template name="dashboard">
+  <div class="row">
+    {{> menuPane}}
+    {{> contentPane}}
+  </div>
+</template>
+
+
+<template name="menuPane">
+
+  <div class="col-md-3">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        Servers
+        <span class="glyphicon glyphicon-plus pull-right"></span>
+      </div>
+      <div class="panel-body">
+        <div class="list-group">
+          {{#each serversList}}
+            {{>serverItem}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>
+
+<template name="contentPane">
+
+  <div class="col-md-9">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Logs</div>
+      <div class="panel-body">
+        <p> logs go here ... </p>
+      </div>
+    </div>
+  </div>
+
+</template>
+
+
+<template name="serverItem">
+  <a href="#" class="list-group-item">
+    {{name}}
+  </a>
+</template>

@@ -12,7 +12,8 @@ bootstrap-3
 coffeescript
 blaze-layout
 accounts-base
-accounts-password
 accounts-ui
 collection2
 npm
+crypto-md5
+accounts-google

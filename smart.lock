@@ -9,23 +9,24 @@
       "bootstrap-3": {},
       "blaze-layout": {},
       "collection2": {},
-      "npm": {}
+      "npm": {},
+      "crypto-md5": {}
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
         "branch": "blaze-integration",
-        "commit": "6fd133401bb6de65a30ba148f7d61ea1b4dc9b43"
+        "commit": "f8ffd44bceacc6a55f4ebcc218c072f5a18138b4"
       },
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
-        "tag": "v3.1.0-1",
-        "commit": "329dccb08bfc18c635676dea600ac9953162cda9"
+        "tag": "v3.1.1-1",
+        "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.0.1",
-        "commit": "fa631b7b192618e8690d43f0033a3f4c7f77fa1d"
+        "tag": "v0.2.1",
+        "commit": "f52f416d6277f27b11832355298553e46b8cc6fd"
       },
       "collection2": {
         "git": "https://github.com/aldeed/meteor-collection2.git",
@@ -37,10 +38,20 @@
         "tag": "v0.2.6",
         "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
       },
+      "crypto-md5": {
+        "git": "https://github.com/oortcloud/meteor-crypto-md5.git",
+        "tag": "v3.1.2.2",
+        "commit": "75bbb3eeace302122d3554a6212a6fe92553fa18"
+      },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
         "tag": "v0.2.40",
         "commit": "d22892daa943e3567916effeaafd794ca6af5cd2"
+      },
+      "crypto-base": {
+        "git": "https://github.com/oortcloud/meteor-crypto-base.git",
+        "tag": "v3.1.2.1",
+        "commit": "5df8d82a0595553415bbfae2930c6ecbeece5794"
       }
     }
   }

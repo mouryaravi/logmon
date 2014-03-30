@@ -1,4 +1,4 @@
-@PersistentLogs = new Meteor.Collection 'logs',
+@PersistentLogs = new Meteor.Collection 'persistentlogs',
   schema: new SimpleSchema {
 
     serverId:
@@ -33,4 +33,3 @@
       optional: true
 
   }
-
