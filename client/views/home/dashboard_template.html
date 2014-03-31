@@ -13,9 +13,12 @@
   <div class="panel panel-primary">
     <div class="panel-heading">
       Servers
-      <span class="glyphicon glyphicon-plus pull-right newServer"></span>
+      <div class="pull-right">
+        <span class="glyphicon glyphicon-plus newServer"></span>
+        <span class="glyphicon  hidePanel">Hide</span>
+      </div>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" id="servers-panel-body">
       <div class="row">
         <div class="list-group">
           {{#each serversList}}

@@ -4,7 +4,6 @@
 
 
 updateExistingLog = (newLog)->
-  console.log 'Update....... new log...', newLog
   PersistentLogs.update(
     {
       serverId: newLog.serverId
@@ -23,7 +22,6 @@ updateExistingLog = (newLog)->
 logsCursor = Logs.find()
 logsCursor.observe
   added: (doc, beforeIndex)->
-    console.log 'Add new log...', doc
     oldLog = PersistentLogs.findOne serverId: doc.serverId, file: doc.file
     if oldLog
       updateExistingLog(doc)
@@ -31,5 +29,4 @@ logsCursor.observe
       PersistentLogs.insert doc
 
   changed: (newDoc, atIndex, oldDoc)->
-    console.log 'Upate existing log...', newDoc
     updateExistingLog(newDoc)

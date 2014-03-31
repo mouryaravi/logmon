@@ -78,7 +78,16 @@
       <file leaf-file-name="servers_template.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/servers/servers_template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="711" selection-end="711" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="629">
+            <state line="19" column="57" selection-start="522" selection-end="522" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="629">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home_template.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/home/home_template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="22" selection-start="45" selection-end="45" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="221">
               <folding />
             </state>
           </provider>
@@ -126,16 +135,25 @@
       <file leaf-file-name="dashboard_template.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/home/dashboard_template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="31" selection-start="450" selection-end="450" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="629">
+            <state line="17" column="41" selection-start="376" selection-end="385" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="680">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server_item.coffee" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/views/servers/server_item.coffee">
+      <file leaf-file-name="dashboard_template.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/home/dashboard_template.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="947" selection-end="947" vertical-scroll-proportion="0.47097626" vertical-offset="0" max-vertical-offset="758">
+            <state line="14" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logs_pub.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/publications/logs/logs_pub.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="0" selection-start="492" selection-end="492" vertical-scroll-proportion="0.64761907" vertical-offset="0" max-vertical-offset="735">
               <folding />
             </state>
           </provider>
@@ -198,15 +216,12 @@
         <option value="$PROJECT_DIR$/.meteor/local/build/programs/server/app/server/lib/logs/logs_server_conn_pool.coffee.js" />
         <option value="$PROJECT_DIR$/server/servers/logs_methods.coffee" />
         <option value="$PROJECT_DIR$/server/lib/logs/logs_server_conn_pool.coffee" />
-        <option value="$PROJECT_DIR$/server/publications/logs/logs_pub.coffee" />
         <option value="$PROJECT_DIR$/client/views/logs/logs_template.coffee" />
         <option value="$PROJECT_DIR$/client/views/logs/logs_template.html" />
-        <option value="$PROJECT_DIR$/client/views/home/dashboard_template.coffee" />
         <option value="$PROJECT_DIR$/client/views/servers/new_server_template.html" />
         <option value="$PROJECT_DIR$/server/servers/new_server_methods.coffee" />
         <option value="$PROJECT_DIR$/lib/collections/servers_model.coffee" />
         <option value="$PROJECT_DIR$/client/views/servers/server_item.html" />
-        <option value="$PROJECT_DIR$/client/views/home/dashboard_template.html" />
         <option value="$PROJECT_DIR$/server/lib/ssh/ssh_conn.coffee" />
         <option value="$PROJECT_DIR$/settings.json" />
         <option value="$PROJECT_DIR$/packages.json" />
@@ -214,6 +229,9 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/server/startup/user_config.coffee" />
         <option value="$PROJECT_DIR$/client/views/servers/server_item.coffee" />
+        <option value="$PROJECT_DIR$/client/views/home/dashboard_template.html" />
+        <option value="$PROJECT_DIR$/client/views/home/dashboard_template.coffee" />
+        <option value="$PROJECT_DIR$/server/publications/logs/logs_pub.coffee" />
       </list>
     </option>
   </component>
@@ -960,13 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/home/home_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="22" selection-start="45" selection-end="45" vertical-scroll-proportion="0.023160763" vertical-offset="0" max-vertical-offset="734">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.meteor/local/build/programs/server/app/server/lib/logs/logs_server_conn_pool.coffee.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="343" selection-end="343" vertical-scroll-proportion="0.17894737" vertical-offset="0" max-vertical-offset="918">
@@ -1004,23 +1015,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/publications/logs/logs_pub.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/servers/new_server_template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="862" selection-end="862" vertical-scroll-proportion="0.46321526" vertical-offset="0" max-vertical-offset="734">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/home/dashboard_template.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="25" selection-start="110" selection-end="110" vertical-scroll-proportion="0.06710526" vertical-offset="0" max-vertical-offset="760">
           <folding />
         </state>
       </provider>
@@ -1109,20 +1106,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/servers/servers_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="711" selection-end="711" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/home/dashboard_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="31" selection-start="450" selection-end="450" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/lib/ssh/credentials_helper.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
@@ -1146,7 +1129,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/servers/server_item.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="947" selection-end="947" vertical-scroll-proportion="0.47097626" vertical-offset="0" max-vertical-offset="758">
+        <state line="4" column="0" selection-start="278" selection-end="278" vertical-scroll-proportion="0.089709766" vertical-offset="0" max-vertical-offset="758">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/servers/servers_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="57" selection-start="522" selection-end="522" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/home/home_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="22" selection-start="45" selection-end="45" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="221">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/home/dashboard_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="41" selection-start="376" selection-end="385" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/home/dashboard_template.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/publications/logs/logs_pub.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="492" selection-end="492" vertical-scroll-proportion="0.64761907" vertical-offset="0" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
