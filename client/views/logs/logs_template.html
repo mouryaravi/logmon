@@ -1,5 +1,22 @@
-<template name="logs">
-  <div class="logs">
-    Showing logs...
+<template name="logsPane">
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">Logs</div>
+    <div class="panel-body">
+      <ul class="nav nav-tabs nav-justified">
+        {{#each selectedLogFiles}}
+          <li>
+            <a href="#{{idHash this}}" class="selectedLog" data-toggle="tab">{{this}}</a>
+          </li>
+        {{/each}}
+      </ul>
+      <div class="tab-content">
+        {{#each selectedLogFiles}}
+          <div class="tab-pane" id="{{idHash this}}">
+          </div>
+        {{/each}}
+      </div>
+    </div>
   </div>
+
 </template>

@@ -2,36 +2,28 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "iron-router": {
-        "git": "https://github.com/EventedMind/iron-router.git",
-        "branch": "blaze-integration"
-      },
+      "iron-router": {},
       "bootstrap-3": {},
-      "blaze-layout": {},
       "collection2": {},
       "npm": {},
-      "crypto-md5": {}
+      "crypto-md5": {},
+      "underscore-string-latest": {}
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "branch": "blaze-integration",
-        "commit": "f8ffd44bceacc6a55f4ebcc218c072f5a18138b4"
+        "tag": "v0.7.0",
+        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
       },
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
         "tag": "v3.1.1-1",
         "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
       },
-      "blaze-layout": {
-        "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.1",
-        "commit": "f52f416d6277f27b11832355298553e46b8cc6fd"
-      },
       "collection2": {
         "git": "https://github.com/aldeed/meteor-collection2.git",
-        "tag": "v0.3.8",
-        "commit": "69aff2a21ba3c382f915e1f9dbcca2ad38edb6d5"
+        "tag": "v0.3.11",
+        "commit": "7e970671305657678e8508d8107d5e6c5e158559"
       },
       "npm": {
         "git": "https://github.com/arunoda/meteor-npm.git",
@@ -43,10 +35,20 @@
         "tag": "v3.1.2.2",
         "commit": "75bbb3eeace302122d3554a6212a6fe92553fa18"
       },
+      "underscore-string-latest": {
+        "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
+        "tag": "v2.3.3",
+        "commit": "4a5d70eee48fbd90a6e6fc78747250d704a0b3bb"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.2",
+        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+      },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
-        "tag": "v0.2.40",
-        "commit": "d22892daa943e3567916effeaafd794ca6af5cd2"
+        "tag": "v0.2.45",
+        "commit": "27a5a943a70a7376c90f18d2e2a4a122c6fc73fb"
       },
       "crypto-base": {
         "git": "https://github.com/oortcloud/meteor-crypto-base.git",

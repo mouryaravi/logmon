@@ -29,18 +29,20 @@
       optional: true
 
     files:
-      type: [String]
+      type: [Object]
       label: 'Log files list'
+    'files.$.index':
+      type: Number
+      label: "File index"
+    'files.$.value':
+      type: String
+      label: 'File path'
 
     userId:
       type: String
       label: 'Server added by'
       max: 200
       denyUpdate: true
-      autoValue: ()->
-        if @isInsert then @userId
-        else if @isUpsert then {$setOnInsert: @userId}
-      optional: true
 
     createdAt:
       type: Date

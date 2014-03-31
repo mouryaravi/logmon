@@ -1,28 +1,34 @@
 
 class @LogsServerConnPool
   @logsConnPool: {}
-  @addIfDoesntExist: (serverId, file)=>
-    if @logsConnPool[serverId] and @logsConnPool[serverId][file]
-      console.log "Connection for", serverId, file, " already exists..."
-      if !_.contains @logsConnPool[serverId][file]['users'], Meteor.userId()
-        @logsConnPool[serverId][file]['users'].push Meteor.userId()
+  @addIfDoesntExist: (server, file)=>
+    host = server.host
+    console.log 'Connection pool: ', @logsConnPool
+
+    if @logsConnPool[host] and @logsConnPool[host][file]
+      console.log "Connection for", host, file, " already exists..."
+      if !_.contains @logsConnPool[host][file]['users'], Meteor.userId()
+        @logsConnPool[host][file]['users'].push Meteor.userId()
     else
-      console.log "Creating new Connection for", serverId, file, "..."
-      conn = SSHConnection.getConnection serverId, file
-      @logsConnPool[serverId] = {}
-      @logsConnPool[serverId][file] = {}
-      @logsConnPool[serverId][file]['connection'] = conn
-      @logsConnPool[serverId][file]['users'] = [Meteor.userId()]
+      console.log "Creating new Connection for", host, file, "..."
+      conn = SSHConnection.getConnection server, file
+      unless @logsConnPool[host]
+        @logsConnPool[host] = {}
+      @logsConnPool[host][file] = {}
+      @logsConnPool[host][file]['connection'] = conn
+      @logsConnPool[host][file]['users'] = [Meteor.userId()]
 
-  @removeClient: (serverId, file)=>
-    if @logsConnPool[serverId] and @logsConnPool[serverId][file]
-      if _.contains @logsConnPool[serverId][file]['users'], Meteor.userId()
-        @logsConnPool[serverId][file]['users'] = _.without @logsConnPool[serverId][file]['users'], Meteor.userId()
+  @removeClient: (server, file)=>
+    host = server.host
+    if @logsConnPool[host] and @logsConnPool[host][file]
+      if _.contains @logsConnPool[host][file]['users'], Meteor.userId()
+        @logsConnPool[host][file]['users'] = _.without @logsConnPool[host][file]['users'], Meteor.userId()
 
 
-  @closeConnectionIfNoClients: (serverId, file)=>
-    if @logsConnPool[serverId] and @logsConnPool[serverId][file]
-      if _.size(@logsConnPool[serverId][file]['users']) == 0
-        conn = @logsConnPool[serverId][file]['connection']
+  @closeConnectionIfNoClients: (server, file)=>
+    host = server.host
+    if @logsConnPool[host] and @logsConnPool[host][file]
+      if _.size(@logsConnPool[host][file]['users']) == 0
+        conn = @logsConnPool[host][file]['connection']
         conn.end()
-        @logsConnPool[serverId][file] = null
+        @logsConnPool[host][file] = null

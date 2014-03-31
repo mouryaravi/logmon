@@ -1,9 +1,5 @@
 class @SSHConnection
-  @getConnection : (serverId, file)->
-    server = Servers.findOne serverId, file
-    unless server
-      throw new Meteor.Error 500, 'Wrong server Id: ' + serverId
-
+  @getConnection : (server, file)->
     Connection = Meteor.require 'ssh2'
     conn = new Connection()
 
@@ -53,11 +49,12 @@ class @SSHConnection
       console.log 'Connection closed for server', server.name
 
 
+    creds = CredentialsHelper.getCredentials(server.host);
     conn.connect
       host: server.host
       port: server.port
-      username: server.username
-      password: server.password
+      username: creds.username
+      password: creds.password
 
 
     console.log "Returning the connection...."

@@ -1,0 +1,12 @@
+<template name="serverItem">
+  <div class="list-group-item">
+    <a class="list-group-item-heading">{{name}}</a>
+    <div class="control-label">
+    {{#each files}}
+      <label class="checkbox">
+        <input id="{{index}}:{{../_id}}" data-label="{{../name}}" type="checkbox" value="{{value}}"/>{{value}}
+      </label>
+    {{/each}}
+    </div>
+  </div>
+</template>

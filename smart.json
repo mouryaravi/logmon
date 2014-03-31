@@ -1,13 +1,10 @@
 {
   "packages": {
-    "iron-router": {
-      "git": "https://github.com/EventedMind/iron-router.git",
-      "branch": "blaze-integration"
-    },
+    "iron-router": {},
     "bootstrap-3": {},
-    "blaze-layout": {},
     "collection2": {},
     "npm": {},
-    "crypto-md5": {}
+    "crypto-md5": {},
+    "underscore-string-latest": {}
   }
 }

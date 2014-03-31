@@ -43,6 +43,8 @@ Template.server.events
           console.log "Requested to stop logs...", status
 
 
+
+
 Deps.autorun ()->
   console.log "Finding for ", Session.get("selectedServer"), ", files: ", Session.get("selectedFiles")
   selectedFiles = Session.get 'selectedFiles'
